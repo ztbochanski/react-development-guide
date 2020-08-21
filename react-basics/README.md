@@ -14,11 +14,18 @@ _`create-react-app` is a tool that allows for quick implementation of react. bab
 
 ![under-the-hood](../images/babel-webpack.png)
 
+### Basic Architecture Considerations
+
+1. If the component has jsx in it, use the .jsx extension
+2. There are 2 types of react components _functional & class based_
+3. Folder structure is very important considering overall app architecture.
+4. Break into small pieces that have one purpose/function
+
 ---
 
 ## ReactDOM/VirtualDOM
 
-### Main File Structure
+### Basic Files
 
 #### App.js
 
@@ -108,7 +115,50 @@ componentDidMount() {
 }
 ```
 
----
+### Properties
+
+##### _Passed down from parent components and always contain `props.children`, children are between the brackets <><>_
+
+This component is a class and only concerned with state
+
+```javascript
+render() {
+    return (
+      <div className="App">
+        <CardList monsters={this.state.monsters} />
+      </div>
+    );
+  }
+```
+
+This component is a function and only concerned with the card list
+
+```javascript
+export const CardList = (props) => {
+  return (
+    <div className="card-list">
+      {props.monsters.map((monster) => (
+        <Card key={monster.id} monster={monster} />
+      ))}
+    </div>
+  );
+};
+```
+
+This component is a function and only concerned with the card
+
+```javascript
+export const Card = (props) => (
+  <div className="card-container">
+    <img
+      src={`https://robohash.org/${props.monster.id}?set=set2&size=180x180`}
+      alt="monster"
+    />
+    <h2>{props.monster.name}</h2>
+    <p>{props.monster.email}</p>
+  </div>
+);
+```
 
 ## Important Javascript Functions Inside React
 
@@ -171,7 +221,7 @@ getSomething('getThis', (callbackFunction, error) => {
 
 #### ES6 Introduces Promises
 
-`.then` is used when a promise is resolved and can keep being chained together to continue resolve and returning what information you need from an object much like our _callback hell_ can return information from an object
+Promises are a way to run asynchronous code, _or code that depends on a response from one event before it can execute the next set of instructions, we are not sure when or if it will complete._ `.then` is used when a promise is resolved and can keep being chained together to continue resolve and returning what information you need from an object much like our _callback hell_ can return information from an object
 
 _A new promise is passed a function that will be in a state of **pending** until either the `resolve` or `reject` has been called_
 
@@ -202,4 +252,23 @@ _`fetch()` returns a promise value, therefore we can get a `.then` that is `{pen
 
 #### ES7 introduces Async Await
 
-- Promises re
+_Asynchronous code is when we don't know when it will complete, async await allows us to declare a function asynchronous and store the responses in variables after they return their resolve/response. If there is an error it can be caught using a try/catch block much like we use `.catch` in promises_
+
+```javascript
+const myAsyncFunction = async () => {
+  try {
+    const usersResponse = await fetch("api-call/users");
+    const users = await usersResponse.json();
+    const firstUser = users[0];
+
+    console.log(firstUser);
+
+    const postsResponse = await fetch("api-call/posts?userID=" + firstUser.id);
+    const posts = await postsResponse.json();
+
+    console.log(posts);
+  } catch (err) {
+    console.log("there was an error");
+  }
+};
+```
