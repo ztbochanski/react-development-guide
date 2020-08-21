@@ -1,5 +1,11 @@
 # React Basics
 
+##### `git clone`
+
+##### `npm install`
+
+##### `npm start`
+
 ![react](../images/logo.png)
 
 ### Installation
