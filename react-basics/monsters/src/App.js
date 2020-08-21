@@ -17,6 +17,7 @@ class App extends Component {
         // initialize empty array in state
       ],
       searchField: "",
+      title: "Monsters",
     };
   }
 
@@ -33,14 +34,14 @@ class App extends Component {
 
   render() {
     // destructuring state object, setting constants to state properties
-    const { monsters, searchField } = this.state;
+    const { monsters, searchField, title } = this.state;
     const filteredMonsters = monsters.filter((monster) =>
       monster.name.toLowerCase().includes(searchField.toLowerCase())
     );
     // render jsx
     return (
       <div className="App">
-        <h1>Monsters</h1>
+        <h1>{title}</h1>
         <SearchBox
           placeholder="search monsters"
           handleChange={this.handleChange}
