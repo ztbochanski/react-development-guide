@@ -1,12 +1,18 @@
 # React Basics
 
+> The idea of this project is to understand the basic concepts of react, learn beginner techniques, and implement best practices
+
+_for local setup_
+
 ##### `git clone`
 
 ##### `npm install`
 
 ##### `npm start`
 
-![react](../images/logo.png)
+## [![react](../images/logo.png)DEMO](https://ztbochanski.github.io/react-development-guide/)
+
+> This demo uses mock data from https://jsonplaceholder.typicode.com/users
 
 ### Installation
 
@@ -136,7 +142,7 @@ classMethod = (e) => {
 };
 ```
 
-### Lifecycle Methods of the Class Component
+### Intro to Lifecycle Methods of the Class Component
 
 **mounting** is when react renders jsx on the DOM,
 `componentDidMount()` is called when react renders on the DOM for the **first** time.
