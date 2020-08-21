@@ -57,10 +57,12 @@
 
 ## Summary
 
-1. Don't touch DOM react will
-2. All about components and VirtualDOM
+1. Don't touch DOM, react will
+2. All about components and creation of our VirtualDOM
 3. Data flows in one direction
-4. UI only, the concept of automating DOM manipulation
+4. UI only, react automates DOM manipulation
+
+![react](images/react-dom.png)
 
 ### The job of a react developer
 
