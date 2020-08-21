@@ -1,6 +1,6 @@
-![react](../images/logo192.png)
-
 # React Basics
+
+![react](../images/logo.png)
 
 ### Installation
 
