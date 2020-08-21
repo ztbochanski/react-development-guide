@@ -7,25 +7,25 @@
 
 > the 'react robot' interacts with the DOM and makes changes for you
 
-## Before React
+### Before React
 
 - html, css, js
 - Simple exchanges between server and client
 - Problems managing adaptations among browser differences
 
-## Birth of SPA
+### Birth of SPA
 
 - Different system only loads app code once
 - Apps act more like desktop app where js simple changes or updates dom w/out having to speak to the server
 - Angularjs is created by google
 
-## React released to dev community
+### React released to dev community
 
 - Facebook creates react architecture IOT handle complex applications
 - Facebook releases react to the community in 2013
 - Released while google was rewriting angularjs
 
-## FOUR 4 React Concepts
+# FOUR 4 React Concepts
 
 ### 1 Fundamentals: declarative vs. imperative
 
