@@ -54,11 +54,10 @@ _this html file where our html is injected, entryway for our application_
 </body>
 ```
 
----
-
 ### Class Component
 
 ```javascript
+// destructuring `Component`
 import React, { Component } from "react";
 ```
 
@@ -98,4 +97,111 @@ _`{curly braces}` execute js expression, can wrap a variable_
 
 _`onClick` is an jsx attribute that can take a function, `setState()` is a method inherited from the super 'Component' class and can take properties and their values_
 
-- **NOT ALLOWED** to modify state in react unless using seState(), this enforces unidirectional data flow
+- **NOT ALLOWED** to modify state in react unless using seState(), this _enforces unidirectional data flow_
+
+### Lifecycle methods of the Class Component
+
+**mounting** is when react renders jsx on the DOM
+`componentDidMount()` is called when react renders on the DOM for the **first** time.
+
+```javascript
+componentDidMount() {
+    // code executes when component rendered on DOM
+}
+```
+
+---
+
+## Important Javascript Functions
+
+### map()
+
+_map() gives us the return of any function we pass it, iterated over every element in the passed in array_
+
+```javascript
+this.state = {
+  // we can now set a property on the state obj
+  monsters: [
+    {
+      name: "Frankenstein",
+      id: "asr1",
+    },
+    {
+      name: "Dracula",
+      id: "sdf2",
+    },
+    {
+      name: "Zombie",
+      id: "asw3",
+    },
+  ],
+};
+
+// ...
+<div className="App">
+  {this.state.monsters.map((monster) => (
+    <h1 key={monster.id}> {monster.name}</h1>
+  ))}
+</div>;
+```
+
+_JSX `key=` attribute helps react keep track of elements that change on the DOM so it doesn't have to re-render the whole DOM if one element changes_
+
+### Javascript async event handling
+
+#### Before promises, massive pyramid of callback hell
+
+```javascript
+getSomething('getThis', (callbackFunction, error) => {
+    // if error
+    throw(error)
+    // else
+    const callbackFunctionId = callbackFunction.id
+
+    getSomethingElse(callbackFunctionId (anotherCallback, error) => {
+        // if error
+        throw(error)
+        // else
+        const anotherCallbackProp = anotherCallback.prop
+
+        getAnotherNestedCallback(){
+            // ...
+        }
+    })
+})
+```
+
+#### ES6 Introduces Promises
+
+- .then is used when a promise is resolved and can keep being chained together to continue resolve and returning what information you need from an object much like our _callback hell_ can return information from an object
+
+_A new promise is passed a function that will be in a state of **pending** until either the `resolve` or `reject` has been called_
+
+```javascript
+const myPromise = new Promise((resolve, reject) => {
+  if (true) {
+    // after 1 sec execute resolve
+    setTimeout(() => {
+      resolve("Success");
+    }, 1000);
+  } else {
+    reject("failed");
+  }
+});
+
+myPromise
+  .then((value) => console.log(value))
+  .catch((rejectValue) => console.log(rejectValue));
+```
+
+- Promises provide control over something _uncertain_, like an API call
+- Allows us to handle our _successes_ with `.then`
+- Allows us to handle our _failures_ with `.catch`
+
+_`.then` can only be called on a **resolved** promise_
+
+- `fetch()` returns a promise value, therefore we can get a .then that is `{pending}` followed by another .then that is the resolved function
+
+#### ES7 introduces Async Await
+
+- Promises re

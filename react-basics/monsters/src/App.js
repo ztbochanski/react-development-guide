@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
@@ -11,22 +10,26 @@ class App extends Component {
     // super gives us access to this.state obj on the 'Component' Class
     this.state = {
       // we can now set a property on the state obj
-      string: "Hello World",
+      monsters: [
+        // initialize empty array in state
+      ],
     };
   }
+
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((users) => this.setState({ monsters: users }));
+  }
+
   render() {
-    // render the property from our state
     return (
       <div className="App">
-        <p>{this.state.string}</p>
-        {/* modify state obj using setState() from 'Component' 
-          every html element has properties like 'onClick' */}
-        <button
-          onClick={() => this.setState({ string: "Heii Verden" })}
-        ></button>
+        {this.state.monsters.map((monster) => (
+          <h1 key={monster.id}> {monster.name}</h1>
+        ))}
       </div>
     );
   }
 }
-
 export default App;
