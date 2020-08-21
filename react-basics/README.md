@@ -104,6 +104,32 @@ _`onClick` is an jsx attribute that can take a function, `setState()` is a metho
 
 We are **NOT ALLOWED** to modify state in react unless using seState(), this _enforces unidirectional data flow_
 
+### Class Methods
+
+Use the arrow function when declaring class methods because js is able to lexically scope the method and bind "this" to the "Class." Therefore you do not have to "bind" the this.method in the constructor to the method defined outside the constructor.
+
+> Use arrow functions on any class methods you define that aren't part of React (i.e. render(), componentDidMount()).
+
+_Without lexical scoping_
+
+```javascript
+constructor() {
+    this.classMethod = this.classMethod.bind(this)
+  }
+
+classMethod(e) = {
+    this.setState({ // ..
+}
+```
+
+_With lexical scoping, no need to bind in constructor_
+
+```javascript
+classMethod = (e) => {
+  this.setState({ // ..
+};
+```
+
 ### Lifecycle Methods of the Class Component
 
 **mounting** is when react renders jsx on the DOM,
