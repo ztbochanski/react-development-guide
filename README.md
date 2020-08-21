@@ -62,7 +62,7 @@
 3. Data flows in one direction
 4. UI only, react automates DOM manipulation
 
-![react](images/react-dom.png)
+![virtualdom-dom](images/react-dom.png)
 
 ### The job of a react developer
 
