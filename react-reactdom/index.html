@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- https://unpkg.com/browse/react-dom@16.13.1/umd/react-dom.development.js -->
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <script>
+      const Person = (props) => {
+        return React.createElement("div", {}, [
+          React.createElement("h1", {}, props.name),
+          React.createElement("p", {}, props.occupation),
+        ]);
+      };
+
+      class App extends React.Component {
+        render() {
+          return React.createElement("div", {}, [
+            // React.createElement("html tab", {html attributes & properties}, children)
+            React.createElement("h1", { key: "37fg" }, "React is rendered!"),
+            React.createElement(Person, {
+              name: "Zach",
+              occupation: "Developer",
+              key: "3o81",
+            }),
+            React.createElement(Person, {
+              name: "Kyle",
+              occupation: "Developer",
+              key: "837g",
+            }),
+          ]);
+        }
+      }
+
+      ReactDOM.render(
+        React.createElement(App),
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
