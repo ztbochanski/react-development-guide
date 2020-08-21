@@ -14,11 +14,11 @@ _`create-react-app` is a tool that allows for quick implementation of react. bab
 
 ![under-the-hood](../images/babel-webpack.png)
 
-# ReactDOM/VirtualDOM
-
 ---
 
-## Main file structure
+## ReactDOM/VirtualDOM
+
+### Main file structure
 
 #### App.js
 
@@ -54,9 +54,7 @@ _this html file where our html is injected, entryway for our application_
 </body>
 ```
 
----
-
-## Class Component
+### Class Component
 
 ```javascript
 import React, { Component } from "react";
