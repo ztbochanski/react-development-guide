@@ -54,6 +54,8 @@ _this html file where our html is injected, entryway for our application_
 </body>
 ```
 
+---
+
 ### Class Component
 
 ```javascript
