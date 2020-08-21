@@ -310,3 +310,50 @@ const myAsyncFunction = async () => {
   }
 };
 ```
+
+---
+
+# Asynchronous setState()
+
+The `setState()` function runs asynchronously because react handles DOM updates from the state change in 'batches.'
+
+Do you want to manipulate or use `state` after the DOM update? Add in a 2nd parameter that is a function to update state, **IF you need to use the state or class props as part of the calculation**, otherwise you can just pass in the object.
+
+The snippet below shows how to use `setState()` properly.
+
+App.js
+
+```javascript
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      meaningOfLife: 28,
+    };
+    this.props = props;
+  }
+
+  handleClick = () => {
+    this.setState((prevState, prevProps) => {
+      return { meaningOfLife: prevState.meaningOfLife + 1 },
+    },
+      () => console.log(this.state.meaningOfLife)
+    )
+  };
+
+  render() {
+    return (
+      <div>
+        <p>{this.state.meaningOfLife}</p>
+        <button onClick={this.handleClick}></button>
+      </div>
+    );
+  }
+}
+```
+
+The function called in the `handleClick()` method after `setState()` is not executed until `setState` finishes.
+
+To get around this we needed to use a callback function and pass it into the 2nd parameter like: `setState({state object}, () => callbackfucntion)`
+
+Basically anytime `this` is used in the setState callback we need to pass in a function so it's grabbing us the most recent data.
