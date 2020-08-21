@@ -61,9 +61,7 @@ _this html file where our html is injected, entryway for our application_
 import React, { Component } from "react";
 ```
 
-_class component has access to state_
-
-- state = js object with properties you can access at anytime inside our class
+state = js object with properties you can access _at anytime inside our class_
 
 ```javascript
 class App extends Component {
@@ -97,7 +95,7 @@ _`{curly braces}` execute js expression, can wrap a variable_
 
 _`onClick` is an jsx attribute that can take a function, `setState()` is a method inherited from the super 'Component' class and can take properties and their values_
 
-- **NOT ALLOWED** to modify state in react unless using seState(), this _enforces unidirectional data flow_
+We are **NOT ALLOWED** to modify state in react unless using seState(), this _enforces unidirectional data flow_
 
 ### Lifecycle methods of the Class Component
 
