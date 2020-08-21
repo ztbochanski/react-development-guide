@@ -22,7 +22,7 @@ _`create-react-app` is a tool that allows for quick implementation of react. bab
 
 #### App.js
 
-_this function returns a block of html (written with jsx)_
+_This function returns a block of html (written with jsx)_
 
 ```javascript
 import React from 'react'
@@ -38,7 +38,7 @@ function App() {
 
 #### index.js
 
-_this function looks at the document and finds `'root'` id, then **replaces** with html returned by `<App />` function_
+_This function looks at the document and finds `'root'` id, then **replaces** with html returned by `<App />` function_
 
 ```javascript
 ReactDOM.render(<App />, document.getElementById("root"));
@@ -46,7 +46,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
 
 #### public/index.html
 
-_this html file where our html is injected, entryway for our application_
+_This html file where our html is injected, entryway for our application_
 
 ```html
 <body>
@@ -61,7 +61,7 @@ _this html file where our html is injected, entryway for our application_
 import React, { Component } from "react";
 ```
 
-state = js object with properties you can access _at anytime inside our class_
+`state` = js object with properties you can access _at anytime inside our class_
 
 ```javascript
 class App extends Component {
