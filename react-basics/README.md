@@ -49,3 +49,47 @@ _this html file where our html is injected, entryway for our application_
   <div id="root"></div>
 </body>
 ```
+
+## Class Component
+
+```javascript
+import React, { Component } from "react";
+```
+
+_class component has access to state_
+
+- state = js object with properties you can access at anytime inside our class
+
+```javascript
+class App extends Component {
+  // override constructor by calling const method
+  constructor() {
+    // super calls constructor method on 'Component' Class
+    super();
+
+    // super gives us access to this.state obj
+    this.state = {
+      // set property on state obj
+      string: "Hello World",
+    };
+  }
+  render() {
+    // render property from our state
+    return <p>{this.state.string}</p>;
+  }
+}
+```
+
+_`{curly braces}` execute js expression, can wrap a variable_
+
+```javascript
+    <p>{this.state.string}</p>
+    {/* modify state obj using setState() from 'Component'
+          every jsx element has attributes like 'onClick' */}
+    <button onClick={() => this.setState({ string: "Heii Verden" })}><button>
+  </div>
+```
+
+_`onClick` is an jsx attribute that can take a function, `setState()` is a method inherited from the super 'Component' class and can take properties and their values_
+
+- **NOT ALLOWED** to modify state in react unless using seState(), this enforces unidirectional data flow
