@@ -9,6 +9,8 @@
 - react 360 is for 3D
 - ... etc
 
+---
+
 ### Exploring react's top level API
 
 Creating an element in javascript using the react library, JSX simply makes this process easier
@@ -22,3 +24,9 @@ Rendering 'App' class to the DOM using the DOM library
 ```javascript
 ReactDOM.render(React.createElement(App), document.getElementById("root"));
 ```
+
+---
+
+### React paints the VDOM to the DOM
+
+![react](../images/virtualdom-dom.png)
