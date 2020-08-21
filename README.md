@@ -25,9 +25,9 @@
 - Facebook releases react to the community in 2013
 - Released while google was rewriting angularjs
 
-## React Concepts
+## FOUR 4 React Concepts
 
-### Fundamentals: declarative vs. imperative
+### 1 Fundamentals: declarative vs. imperative
 
 - Paradigm programming (explicitly writing everything) is too difficult to manage
 - Manages DOM tree and API so you don't have to manually write things like `document.createElement()`
@@ -35,13 +35,13 @@
 - Build web interface without touching the DOM
 - React observes state object and **reacts** to what the object describes instead of the DOM being explicitly written
 
-### Components
+### 2 Components
 
 - Components allow the practice of DRY
 - Components created based on the state object and built as **functions**
 - These functions can be added to the page like lego blocks
 
-### Unique directional data flow
+### 3 Unique directional data flow
 
 - JSX passed to react library **IOT create VirtualDOM**
 - VirtualDOM gives react a blueprint IOT update actual dom
@@ -49,7 +49,7 @@
 - State changes => determine how DOM is rendered
 - This flow restricts helps with debugging
 
-### React is simply the UI
+### 4 React is simply the UI
 
 > Only a UI library the rest is up to the developer
 
