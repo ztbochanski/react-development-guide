@@ -18,7 +18,7 @@ _`create-react-app` is a tool that allows for quick implementation of react. bab
 
 ## ReactDOM/VirtualDOM
 
-### Main file structure
+### Main File Structure
 
 #### App.js
 
@@ -97,9 +97,9 @@ _`onClick` is an jsx attribute that can take a function, `setState()` is a metho
 
 We are **NOT ALLOWED** to modify state in react unless using seState(), this _enforces unidirectional data flow_
 
-### Lifecycle methods of the Class Component
+### Lifecycle Methods of the Class Component
 
-**mounting** is when react renders jsx on the DOM
+**mounting** is when react renders jsx on the DOM,
 `componentDidMount()` is called when react renders on the DOM for the **first** time.
 
 ```javascript
@@ -110,7 +110,7 @@ componentDidMount() {
 
 ---
 
-## Important Javascript Functions
+## Important Javascript Functions Inside React
 
 ### map()
 
@@ -171,7 +171,7 @@ getSomething('getThis', (callbackFunction, error) => {
 
 #### ES6 Introduces Promises
 
-- .then is used when a promise is resolved and can keep being chained together to continue resolve and returning what information you need from an object much like our _callback hell_ can return information from an object
+`.then` is used when a promise is resolved and can keep being chained together to continue resolve and returning what information you need from an object much like our _callback hell_ can return information from an object
 
 _A new promise is passed a function that will be in a state of **pending** until either the `resolve` or `reject` has been called_
 
@@ -198,7 +198,7 @@ myPromise
 
 _`.then` can only be called on a **resolved** promise_
 
-- `fetch()` returns a promise value, therefore we can get a .then that is `{pending}` followed by another .then that is the resolved function
+_`fetch()` returns a promise value, therefore we can get a `.then` that is `{pending}` followed by another `.then` that is the resolved function_
 
 #### ES7 introduces Async Await
 
