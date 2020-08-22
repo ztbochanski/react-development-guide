@@ -3,17 +3,15 @@
 > _"A misinterpretation of the 
 >official react documentation,"_
 
-_**The idea of this section is to understand the basic concepts of react, learn base techniques, and implement best practices**_
-
 ![react](../images/logo.png)
 
-_for local setup_
+_**The idea of this section is to understand the basic concepts of react, learn base techniques, and implement best practices**_
 
-##### `git clone`
+_for build_
 
-##### `npm install`
+##### `npm deploy`
 
-##### `npm start`
+...or try the:
 
 ## [DEMO](https://ztbochanski.github.io/react-development-guide/)
 
