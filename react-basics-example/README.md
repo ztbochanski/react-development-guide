@@ -1,6 +1,6 @@
 # React Basics
 
-> The idea of this project is to understand the basic concepts of react, learn beginner techniques, and implement best practices
+> The idea of this section is to understand the basic concepts of react, learn beginner techniques, and implement best practices
 
 _for local setup_
 
