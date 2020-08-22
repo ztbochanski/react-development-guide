@@ -1,9 +1,10 @@
 # React Basics
 
-> _"A misinterpretation of the official react documentation, a landslide"_
+> _"A misinterpretation of the official react documentation,"_
+
 > Senior Developer
 
-_The idea of this section is to understand the basic concepts of react, learn beginner techniques, and implement best practices_
+>_The idea of this section is to understand the basic concepts of react, learn beginner techniques, and implement best practices_
 
 _for local setup_
 
