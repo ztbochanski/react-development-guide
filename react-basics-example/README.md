@@ -1,5 +1,7 @@
 # React Basics
 
+> "A landslide misinterpretation of the official react documentation"
+> - Senior Developer
 > The idea of this section is to understand the basic concepts of react, learn beginner techniques, and implement best practices
 
 _for local setup_
