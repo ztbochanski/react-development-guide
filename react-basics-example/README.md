@@ -38,8 +38,6 @@ _`create-react-app` is a tool that allows for quick implementation of react. bab
 
 ---
 
-## ReactDOM/VirtualDOM
-
 ### Basic Files
 
 #### App.js
@@ -355,9 +353,13 @@ Basically anytime `this` is used in the setState callback we need to pass in a f
 ? ternary operator has 3 parts `if true/false, ? execute this : or this`
 ! bang operator returns the opposite boolean value `!state.showChild`
 
-### Lifecycles
+---
 
-> There are 3 main ways react handles a components life
+## Lifecycles
+
+### The 3 Phases
+
+> There are 3 main ways react handles a components lifecycle
 
 1. **Mounting**
    a. constructor
@@ -373,7 +375,7 @@ Basically anytime `this` is used in the setState callback we need to pass in a f
 
 _[React Lifecycle Diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)_
 
-The Lifecycle Methods:
+### Lifecycle Methods
 
 ```javascript
 class ExampleComponent extends React.Component {
@@ -403,25 +405,25 @@ class ExampleComponent extends React.Component {
 
 ---
 
-1. `componentDidMount()` called after our base component is added to our DOM and initial state is set.
+1. **`componentDidMount()`** called after our base component is added to our DOM and initial state is set.
 
 - A good override use case would be making API calls
 
 ---
 
-2. `componentDidUpdate()` called after the _update cycle_ is completed and changes are rendered to the DOM
+2. **`componentDidUpdate()`** called after the _update cycle_ is completed and changes are rendered to the DOM
 
 - Can use for executing a function after an update occurs and `render()` is completed.
 
 ---
 
-3. `componentWillUnmount()` called right before the component is removed from the DOM.
+3. **`componentWillUnmount()`** called right before the component is removed from the DOM.
 
 - Can be used to execute code before component disappears from DOM
 
 ---
 
-4. `shouldComponentDidUpdate(nextProps, nextState)` props or state come in as a parameter to determine if re-render `render()` is necessary
+4. **`shouldComponentDidUpdate(nextProps, nextState)`** props or state come in as a parameter to determine if re-render `render()` is necessary
 
 - There may not be a need for components to update even though a `render()` is triggered.
 - A good override use case would be to block the _update cycle_ from occurring and we don't want it to because things like `setState()` and a 'prop change' trigger this cycle. Good for performance.
