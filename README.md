@@ -1,3 +1,5 @@
+# react-development-guide
+
 ![react](images/logo.png)
 
 > #### Project Goals
@@ -5,7 +7,7 @@
 > - Learn to work on client application development with react
 > - Explore the react basics, ui frameworks, state management, pwa capabilities, testing, mobile support, graphql, architectural concepts, workflows, etc.
 
-# Why Does React Exist?
+## Why Does React Exist?
 
 > the 'react robot' interacts with the DOM and makes changes for you
 
