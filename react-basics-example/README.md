@@ -5,17 +5,18 @@
 
 ![react](../images/logo.png)
 
-_**The idea of this section is to understand the basic concepts of react, learn base techniques, and implement best practices**_
-
-_for build_
+_to build..._
 
 ##### `npm deploy`
 
-...or try the:
+_or try the..._
 
 ## [DEMO](https://ztbochanski.github.io/react-development-guide/)
 
 > This demo uses mock data from https://jsonplaceholder.typicode.com/users
+### Purpose
+
+_**The idea of this section is to understand the basic concepts of react, learn base techniques, and implement best practices**_
 
 ### Installation
 
