@@ -1,6 +1,6 @@
 # react-development-guide
 
-leanred a lot through https://zerotomastery.io/
+learning credit https://zerotomastery.io/, they are amazing at explaining things!
 
 ![react](images/logo.png)
 
