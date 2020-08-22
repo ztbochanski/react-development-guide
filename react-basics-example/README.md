@@ -190,9 +190,9 @@ export const Card = (props) => (
 );
 ```
 
-## Important Javascript Functions Inside React
+### Important Javascript Functions Inside React
 
-### map()
+#### map()
 
 _map() gives us the return of any function we pass it, iterated over every element in the passed in array_
 
@@ -225,7 +225,7 @@ this.state = {
 
 _JSX `key=` attribute helps react keep track of elements that change on the DOM so it doesn't have to re-render the whole DOM if one element changes_
 
-### Javascript async event handling
+### Javascript Async Events
 
 #### Before promises, massive pyramid of callback hell
 
@@ -249,7 +249,7 @@ getSomething('getThis', (callbackFunction, error) => {
 })
 ```
 
-#### ES6 Introduces Promises
+### ES6 Introduces Promises
 
 Promises are a way to run asynchronous code, _or code that depends on a response from one event before it can execute the next set of instructions, we are not sure when or if it will complete._ `.then` is used when a promise is resolved and can keep being chained together to continue resolve and returning what information you need from an object much like our _callback hell_ can return information from an object
 
@@ -280,7 +280,7 @@ _`.then` can only be called on a **resolved** promise_
 
 _`fetch()` returns a promise value, therefore we can get a `.then` that is `{pending}` followed by another `.then` that is the resolved function_
 
-#### ES7 introduces Async Await
+### ES7 Introduces Async Await
 
 _Asynchronous code is when we don't know when it will complete, async await allows us to declare a function asynchronous and store the responses in variables after they return their resolve/response. If there is an error it can be caught using a try/catch block much like we use `.catch` in promises_
 
@@ -355,7 +355,7 @@ Basically anytime `this` is used in the setState callback we need to pass in a f
 ? ternary operator has 3 parts `if true/false, ? execute this : or this`
 ! bang operator returns the opposite boolean value `!state.showChild`
 
-## Lifecycles
+### Lifecycles
 
 > There are 3 main ways react handles a components life
 
