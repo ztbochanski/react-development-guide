@@ -1,6 +1,6 @@
 # react-development-guide
 
-learning credit https://zerotomastery.io/, they are amazing at explaining things
+learning credit https://zerotomastery.io/, amazing explanations, and of course https://reactjs.org/docs/getting-started.html
 
 ![react](images/logo.png)
 
@@ -31,7 +31,7 @@ learning credit https://zerotomastery.io/, they are amazing at explaining things
 - Facebook releases react to the community in 2013
 - Released while google was rewriting angularjs
 
-# FOUR 4 React Concepts
+## 4 React Concepts
 
 ### 1 Fundamentals: declarative vs. imperative
 
