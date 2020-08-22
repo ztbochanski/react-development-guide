@@ -14,6 +14,8 @@ _or try the..._
 ## [DEMO](https://ztbochanski.github.io/react-development-guide/)
 
 > This demo uses mock data from https://jsonplaceholder.typicode.com/users
+> Images are generated via https://robohash.org/
+
 ### Purpose
 
 _**The idea of this section is to understand the basic concepts of react, learn base techniques, and implement best practices**_
