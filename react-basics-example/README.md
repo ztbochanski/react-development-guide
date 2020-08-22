@@ -142,17 +142,6 @@ classMethod = (e) => {
 };
 ```
 
-### Intro to Lifecycle Methods of the Class Component
-
-**mounting** is when react renders jsx on the DOM,
-`componentDidMount()` is called when react renders on the DOM for the **first** time.
-
-```javascript
-componentDidMount() {
-    // code executes when component rendered on DOM
-}
-```
-
 ### Properties
 
 ##### _Passed down from parent components and always contain `props.children`, children are between the brackets <><>_
@@ -313,7 +302,7 @@ const myAsyncFunction = async () => {
 
 ---
 
-# Asynchronous setState()
+### Asynchronous setState()
 
 The `setState()` function runs asynchronously because react handles DOM updates from the state change in 'batches.'
 
@@ -357,3 +346,92 @@ The function called in the `handleClick()` method after `setState()` is not exec
 To get around this we needed to use a callback function and pass it into the 2nd parameter like: `setState({state object}, () => callbackfucntion)`
 
 Basically anytime `this` is used in the setState callback we need to pass in a function so it's grabbing us the most recent data.
+
+### Helpful Javascript Operators Reminder
+
+? ternary operator has 3 parts `if true/false, ? execute this : or this`
+! bang operator returns the opposite boolean value `!state.showChild`
+
+## Lifecycles
+
+> There are 3 main ways react handles a components life
+
+1. **Mounting**
+   a. constructor
+   b. `render()`
+   c. react updates DOM
+   e. `componentDidMount()`
+2. **Updating**
+   a. `render()` new props, `setState()`, `forceUpdate()`
+   b. react updates DOM
+   c. `componentDidUpdate()`
+3. **Unmounting**
+   a. `componentWillUnmount()`
+
+_[React Lifecycle Diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)_
+
+The Lifecycle Methods:
+
+```javascript
+class ExampleComponent extends React.Component {
+  constructor() {
+    super();
+    console.log("constructor!");
+  }
+
+  componentDidMount() {
+    console.log("componentDidMount!");
+  }
+
+  componentDidUpdate() {
+    console.log("componentDidUpdate!");
+  }
+
+  componentWillUnmount() {
+    console.log("componentWillUnmount!");
+  }
+
+  shouldComponentDidUpdate(nextProps, nextState) {
+    console.log("shouldComponentDidUpdate!", nextProps);
+    return nextProps.value != this.props.value;
+  }
+}
+```
+
+---
+
+1. `componentDidMount()` called after our base component is added to our DOM and initial state is set.
+
+- A good override use case would be making API calls
+
+---
+
+2. `componentDidUpdate()` called after the _update cycle_ is completed and changes are rendered to the DOM
+
+- Can use for executing a function after an update occurs and `render()` is completed.
+
+---
+
+3. `componentWillUnmount()` called right before the component is removed from the DOM.
+
+- Can be used to execute code before component disappears from DOM
+
+---
+
+4. `shouldComponentDidUpdate(nextProps, nextState)` props or state come in as a parameter to determine if re-render `render()` is necessary
+
+- There may not be a need for components to update even though a `render()` is triggered.
+- A good override use case would be to block the _update cycle_ from occurring and we don't want it to because things like `setState()` and a 'prop change' trigger this cycle. Good for performance.
+
+---
+
+##### Example of Mounting
+
+**mounting** is when react renders jsx on the DOM,
+`componentDidMount()` is called when react renders on the DOM for the **first** time.
+
+```javascript
+componentDidMount() {
+    // code executes when component rendered on DOM
+}
+```
