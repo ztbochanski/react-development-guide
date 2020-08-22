@@ -1,6 +1,6 @@
 # react-development-guide
 
-learning credit https://zerotomastery.io/, they are amazing at explaining things!
+learning credit https://zerotomastery.io/, they are amazing at explaining things
 
 ![react](images/logo.png)
 
