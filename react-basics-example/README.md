@@ -21,7 +21,7 @@ _for local setup_
 
 `npx install create-react-app <your-app-name>`
 
-_`npx` allows us to **not** [install create-react-app](https://github.com/facebook/create-react-app) package globally and just run this one command to install the dependencies locally and create our app_
+_`npx` allows us to **not** install [create-react-app](https://github.com/facebook/create-react-app) package globally and just run this one command to install the dependencies locally and create our app_
 
 ### Environment
 
