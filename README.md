@@ -1,5 +1,7 @@
 # react-development-guide
 
+leanred a lot through https://zerotomastery.io/
+
 ![react](images/logo.png)
 
 > #### Project Goals
