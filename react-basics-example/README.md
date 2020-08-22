@@ -1,3 +1,5 @@
+[![react](../images/logo.png)
+
 # React Basics
 
 > _"A misinterpretation of the 
@@ -13,7 +15,7 @@ _for local setup_
 
 ##### `npm start`
 
-## [![react](../images/logo.png)DEMO](https://ztbochanski.github.io/react-development-guide/)
+## [DEMO](https://ztbochanski.github.io/react-development-guide/)
 
 > This demo uses mock data from https://jsonplaceholder.typicode.com/users
 
