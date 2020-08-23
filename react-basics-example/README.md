@@ -1,24 +1,30 @@
 # React Basics
 
-> The idea of this project is to understand the basic concepts of react, learn beginner techniques, and implement best practices
+> _"A misinterpretation of the 
+>official react documentation,"_
 
-_for local setup_
+![react](../images/logo.png)
 
-##### `git clone`
+_to build..._
 
-##### `npm install`
+##### `npm deploy`
 
-##### `npm start`
+_or try the..._
 
-## [![react](../images/logo.png)DEMO](https://ztbochanski.github.io/react-development-guide/)
+## [DEMO](https://ztbochanski.github.io/react-development-guide/)
 
 > This demo uses mock data from https://jsonplaceholder.typicode.com/users
+> Images are generated via https://robohash.org/
+
+### Purpose
+
+_**The idea of this section is to understand the basic concepts of react, learn base techniques, and implement best practices**_
 
 ### Installation
 
 `npx install create-react-app <your-app-name>`
 
-_`npx` allows us to **not** install create-react-app package globally and just run this one command to install the dependencies locally and create our app_
+_`npx` allows us to **not** install [create-react-app](https://github.com/facebook/create-react-app) package globally and just run this one command to install the dependencies locally and create our app_
 
 ### Environment
 
@@ -34,8 +40,6 @@ _`create-react-app` is a tool that allows for quick implementation of react. bab
 4. Break into small pieces that have one purpose/function
 
 ---
-
-## ReactDOM/VirtualDOM
 
 ### Basic Files
 
@@ -187,9 +191,9 @@ export const Card = (props) => (
 );
 ```
 
-## Important Javascript Functions Inside React
+### Important Javascript Functions Inside React
 
-### map()
+#### map()
 
 _map() gives us the return of any function we pass it, iterated over every element in the passed in array_
 
@@ -222,7 +226,7 @@ this.state = {
 
 _JSX `key=` attribute helps react keep track of elements that change on the DOM so it doesn't have to re-render the whole DOM if one element changes_
 
-### Javascript async event handling
+### Javascript Async Events
 
 #### Before promises, massive pyramid of callback hell
 
@@ -246,7 +250,7 @@ getSomething('getThis', (callbackFunction, error) => {
 })
 ```
 
-#### ES6 Introduces Promises
+### ES6 Introduces Promises
 
 Promises are a way to run asynchronous code, _or code that depends on a response from one event before it can execute the next set of instructions, we are not sure when or if it will complete._ `.then` is used when a promise is resolved and can keep being chained together to continue resolve and returning what information you need from an object much like our _callback hell_ can return information from an object
 
@@ -277,7 +281,7 @@ _`.then` can only be called on a **resolved** promise_
 
 _`fetch()` returns a promise value, therefore we can get a `.then` that is `{pending}` followed by another `.then` that is the resolved function_
 
-#### ES7 introduces Async Await
+### ES7 Introduces Async Await
 
 _Asynchronous code is when we don't know when it will complete, async await allows us to declare a function asynchronous and store the responses in variables after they return their resolve/response. If there is an error it can be caught using a try/catch block much like we use `.catch` in promises_
 
@@ -352,9 +356,13 @@ Basically anytime `this` is used in the setState callback we need to pass in a f
 ? ternary operator has 3 parts `if true/false, ? execute this : or this`
 ! bang operator returns the opposite boolean value `!state.showChild`
 
+---
+
 ## Lifecycles
 
-> There are 3 main ways react handles a components life
+### The 3 Phases
+
+> There are 3 main ways react handles a components lifecycle
 
 1. **Mounting**
    a. constructor
@@ -370,7 +378,7 @@ Basically anytime `this` is used in the setState callback we need to pass in a f
 
 _[React Lifecycle Diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)_
 
-The Lifecycle Methods:
+### Lifecycle Methods
 
 ```javascript
 class ExampleComponent extends React.Component {
@@ -400,25 +408,25 @@ class ExampleComponent extends React.Component {
 
 ---
 
-1. `componentDidMount()` called after our base component is added to our DOM and initial state is set.
+1. **`componentDidMount()`** called after our base component is added to our DOM and initial state is set.
 
 - A good override use case would be making API calls
 
 ---
 
-2. `componentDidUpdate()` called after the _update cycle_ is completed and changes are rendered to the DOM
+2. **`componentDidUpdate()`** called after the _update cycle_ is completed and changes are rendered to the DOM
 
 - Can use for executing a function after an update occurs and `render()` is completed.
 
 ---
 
-3. `componentWillUnmount()` called right before the component is removed from the DOM.
+3. **`componentWillUnmount()`** called right before the component is removed from the DOM.
 
 - Can be used to execute code before component disappears from DOM
 
 ---
 
-4. `shouldComponentDidUpdate(nextProps, nextState)` props or state come in as a parameter to determine if re-render `render()` is necessary
+4. **`shouldComponentDidUpdate(nextProps, nextState)`** props or state come in as a parameter to determine if re-render `render()` is necessary
 
 - There may not be a need for components to update even though a `render()` is triggered.
 - A good override use case would be to block the _update cycle_ from occurring and we don't want it to because things like `setState()` and a 'prop change' trigger this cycle. Good for performance.
