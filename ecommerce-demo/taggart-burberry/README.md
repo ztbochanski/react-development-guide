@@ -1,10 +1,11 @@
 # taggart-burberry
 
-- react client
+> an exploratory react client application built 
+> to reinforce fundamentals in react
 
 ### Router
 
-`#### npm install react-router-dom`
+#### `npm install react-router-dom`
 
 `{ BrowserRouter, Route, Switch, withRouter, }`
 
