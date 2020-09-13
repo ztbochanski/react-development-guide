@@ -1,12 +1,10 @@
-# Notes from React Guide
-
-I took the below notes while watching Udemy videos. See [here](../burger-basics--01-after-eject-and-css-modules/README.md) for full notes from instructor.
+# React Sandbox
 
 Use [the Playground](src/Playground/Playground.js) for working with concepts.
 
-All components can be viewed together (eg. Playground, Composition, State) by running `npm start` in this `react_test_app` directory.
+All components can be viewed together (eg. Playground, Composition, State) by running `npm start` in this `react_app_kbochanski` directory.
 
-## Useful dev Tips
+## Scribbles
 
 * `props.<attr>` or `props.children` used to grab parent info
 * `state` used to store current component info
@@ -61,28 +59,11 @@ All components can be viewed together (eg. Playground, Composition, State) by ru
   }
   ```
 See ![middleware example](public/middleware.png)
-
-
-## Help Development!
-
-* Use [these slides](https://docs.google.com/presentation/d/1aGzNKF4CqcfOrTORP10rinEPDvdcnuP5N53zmS2qqCI/edit#slide=id.g893f296666_0_158) to guide development
-* [Data Model](https://docs.google.com/drawings/d/1lh2SUuy-ngXZWHrw9-gF9pIgfwlmFvszBWFVd2eVZBk/edit)
-* [UI](https://docs.google.com/drawings/d/1WQK6mcNN563UXjA4f8H2BXPWzQLD3LFTr7Io-h6xmMY/edit)
-* Will prob want to incorporate routing to simulate multi-page app.
-* Need to think about whether to use `redux` or functional programming with hooks to manage state. Not sure yet.
-* Develop using class-based components then may switch to functional
-* Will want to look at service worker for [Progressive Web App](https://create-react-app.dev/docs/making-a-progressive-web-app/) standards
-* See [redux](https://redux.js.org/introduction/getting-started) for state store details.
 * React Hooks
   * `useState()` is most important hook for giving state for functions
     * eg. using array destructering `const [enteredVal, setEnteredVal] = useState('');`
     * Then could do `const addValHandler = val = { setEnteredVal(prevVals => [...prevVals, newVal])}`
     * Then can pass this function from root component to children to update state
-
-
-----------------------------------
-## Notes
-----------------------------------
 
 * Component Deep Dive (**Section 7**)
 * State Management. 
