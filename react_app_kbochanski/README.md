@@ -64,6 +64,7 @@ See ![middleware example](public/middleware.png)
     * eg. using array destructering `const [enteredVal, setEnteredVal] = useState('');`
     * Then could do `const addValHandler = val = { setEnteredVal(prevVals => [...prevVals, newVal])}`
     * Then can pass this function from root component to children to update state
+* Context API not good for replacing state management (aka redux is most common tool) because it will update all components when something changes (aka not designed for optimizing state management)
 
 * Component Deep Dive (**Section 7**)
 * State Management. 
