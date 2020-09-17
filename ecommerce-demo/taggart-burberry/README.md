@@ -4,12 +4,13 @@
 
 ## React Router
 
-#### `npm install react-router-dom` 
+#### `npm install react-router-dom`
 
 **BrowserRouter** HTML5 history API, keep UI in sync with URL
 
-**Route**  Renders some UI when path matches current URL
+**Route** Renders some UI when path matches current URL
 props:
+
 - match
 - history
 - location
@@ -18,12 +19,21 @@ props:
 
 **withRouter** Higher Order Component where you can access the history object's properties in a Component that does not have a Route
 
-```javascript 
+```javascript
 export default withRouter(ComponentName); // returns the history props to the passed in component
 ```
 
 **history**
+
 - location.path
 - push
 - goBack
 - etc
+
+### reselect
+
+`<redux_store>.selectors.js`
+
+#### input selectors
+
+- grab or select a slice of state
