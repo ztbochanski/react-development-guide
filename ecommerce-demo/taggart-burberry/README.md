@@ -30,10 +30,18 @@ export default withRouter(ComponentName); // returns the history props to the pa
 - goBack
 - etc
 
-### reselect
+### Reselect
 
-`<redux_store>.selectors.js`
+Your file should be named: `<redux_module_folder_name>.selectors.js`
+
+- a library that helps create memoized selector functions from redux store object
+- https://redux.js.org/recipes/computing-derived-data
 
 #### input selectors
 
 - grab or select a slice of state
+
+### Session Storage and Persistence
+
+- Redux Persist `npm install redux-persist`
+- In the Redux store file import `{ persistStore }` which allows us to chache the store object into the browsers local storage
