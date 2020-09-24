@@ -18,7 +18,6 @@ const StripeCheckoutButton = ({ price }) => {
       name="TAGGART BURBERRY"
       billingAddress
       shippingAddress
-      image="../../assets/paw-print.png"
       description={`your total is $${price}`}
       amount={priceForStripe}
       panelLabel="Pay Now"
