@@ -1,1 +1,0 @@
-# Taggart Burberry Fashion App
